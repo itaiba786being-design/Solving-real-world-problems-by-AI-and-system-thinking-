@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taiba Fatima – AI Engineer and Entrepreneur, Layyah</title>
+<meta name="description" content="Taiba Fatima is an AI engineer and entrepreneur from Layyah, Pakistan. She builds AI systems and the business around them.">
+<meta property="og:title" content="Taiba Fatima – AI Engineer">
+<meta property="og:description" content="Solving real-world problems with artificial intelligence and system thinking.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Taiba Fatima","jobTitle":"AI Engineer and Entrepreneur","address":{"@type":"PostalAddress","addressLocality":"Layyah","addressCountry":"PK"},"description":"AI engineer who solves real-world problems with artificial intelligence and system thinking."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+/* ===== Design tokens ===== */
+:root{
+  --bg:#F2F5F8;--surface:#FFFFFF;--ink:#13202E;--muted:#4D5E72;--line:#CBD5E0;--accent:#1F4FE0;--signal:#C2410C;
+  --s1:8px;--s2:16px;--s3:24px;--s4:48px;--s5:80px;--r:6px;--shadow:0 1px 2px rgba(19,32,46,.08);
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1A28;--surface:#142335;--ink:#E8EEF5;--muted:#9AABBF;--line:#27405C;--accent:#7C9DFF;--signal:#FF8A57;--shadow:none;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1A28;--surface:#142335;--ink:#E8EEF5;--muted:#9AABBF;--line:#27405C;--accent:#7C9DFF;--signal:#FF8A57;--shadow:none;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:var(--s5) 0 0}
+h2{font-size:clamp(1.8rem,5vw,2.5rem);letter-spacing:-.02em;margin-bottom:var(--s2)}
+.lede{color:var(--muted);max-width:38em;margin:0 0 var(--s3)}
+.btn{display:inline-block;padding:12px 20px;border-radius:4px;font:500 1rem "IBM Plex Sans",sans-serif;text-decoration:none;cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:var(--bg)}
+.btn.alt{background:transparent;color:var(--ink)}
+.chip{display:inline-block;font:.8rem var(--mono);padding:2px 9px;border:1px solid var(--line);border-radius:99px;margin:0 6px 6px 0;color:var(--muted)}
+
+/* ===== Navigation ===== */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:var(--s2);min-height:60px}
+.brand{font:800 1.15rem var(--display);color:var(--ink);text-decoration:none;margin-right:auto}
+.links{display:flex;gap:var(--s3);align-items:center}
+.links a{color:var(--ink);text-decoration:none;font-size:.95rem}
+.links a:hover{color:var(--accent)}
+.icon{background:none;border:1px solid var(--line);color:var(--ink);border-radius:4px;width:40px;height:40px;cursor:pointer;font-size:1.1rem}
+#menu{display:none}
+@media (max-width:800px){
+  #menu{display:block}
+  .links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:var(--s2) 22px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .nav .btn.cta{display:none}
+}
+
+/* ===== Hero ===== */
+.hero{padding-top:var(--s4);display:grid;gap:var(--s3);grid-template-columns:1.1fr .9fr;align-items:center}
+.hero h1{font-size:clamp(3rem,10vw,5.6rem);font-weight:800;letter-spacing:-.035em}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:30em}
+.hero p.pos{color:var(--ink);font-size:1.35rem;font-weight:500;margin:var(--s2) 0 var(--s1)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:var(--s3)}
+canvas{width:100%;height:340px;display:block;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+@media (max-width:800px){.hero{grid-template-columns:1fr}canvas{height:240px}}
+
+/* ===== About ===== */
+.about{display:grid;grid-template-columns:200px 1fr;gap:var(--s3);align-items:start}
+.photo{aspect-ratio:1;border:1px dashed var(--line);border-radius:var(--r);display:grid;place-items:center;font:800 3rem var(--display);color:var(--muted);background:var(--surface)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s2);margin:var(--s3) 0 0}
+.facts div{border-top:2px solid var(--accent);padding-top:8px}
+.facts dt{color:var(--muted);font-size:.9rem}.facts dd{margin:0;font-weight:500}
+@media (max-width:640px){.about{grid-template-columns:1fr}.photo{max-width:140px}}
+
+/* ===== Expertise tabs ===== */
+[role=tablist]{display:flex;gap:8px;margin-bottom:var(--s2);flex-wrap:wrap}
+[role=tab]{background:none;border:1px solid var(--line);color:var(--ink);padding:9px 16px;border-radius:99px;cursor:pointer;font:500 .95rem "IBM Plex Sans",sans-serif}
+[role=tab][aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tabpanel ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--s2)}
+.tabpanel li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s2);box-shadow:var(--shadow)}
+.tabpanel strong{font:700 1.05rem var(--display);display:block;margin-bottom:4px}
+.tabpanel span{color:var(--muted);font-size:.95rem}
+
+/* ===== Projects ===== */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--s3)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:var(--s3)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3);box-shadow:var(--shadow);transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card h3{font-size:1.25rem;margin-bottom:8px}
+.card p{margin:6px 0;color:var(--muted);font-size:.97rem}
+.card b{color:var(--ink);font-weight:500}
+.card .out{border-left:3px solid var(--signal);padding-left:10px;margin:12px 0}
+.hidden{display:none}
+.js .reveal{opacity:0;transition:opacity .6s}.js .reveal.in{opacity:1}
+
+/* ===== Stack ===== */
+.stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s3)}
+.stack h3{font-size:1.05rem;margin-bottom:10px}
+
+/* ===== Services ===== */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:var(--s3)}
+.services .card ul{padding-left:18px;color:var(--muted);margin:10px 0 16px;font-size:.96rem}
+
+/* ===== Contact ===== */
+.contact{display:grid;grid-template-columns:1.2fr .8fr;gap:var(--s4)}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+label{display:block;font-weight:500;font-size:.95rem;margin-bottom:14px}
+input,select,textarea{display:block;width:100%;margin-top:5px;padding:11px;font:1rem "IBM Plex Sans",sans-serif;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:4px}
+.err{color:var(--signal);font-size:.88rem;min-height:1.2em;display:block}
+.contact ul{list-style:none;padding:0;display:grid;gap:10px}
+
+footer{margin-top:var(--s5);border-top:1px solid var(--line);padding:var(--s3) 0 var(--s4);color:var(--muted);font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;gap:var(--s2);flex-wrap:wrap}
+/* ===== Timeline, status, quotes ===== */
+.tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--accent);display:grid;gap:18px}
+.tl li{position:relative}.tl li::before{content:"";position:absolute;left:-29px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl b{font:700 1.1rem var(--display)}.tl small{color:var(--muted);display:block}
+.status{font:.8rem var(--mono);color:var(--signal)}
+.card blockquote{margin:0 0 10px;font-size:1.02rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}.js .reveal{opacity:1;transition:none}}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top">Taiba Fatima</a>
+  <nav class="links" id="links" aria-label="Main">
+    <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="icon" id="theme" aria-label="Toggle light and dark mode">◐</button>
+  <a class="btn cta" href="#contact">Start a project</a>
+  <button class="icon" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="links">☰</button>
+</div></header>
+
+<main id="top" class="wrap">
+
+<!-- ===== Hero ===== -->
+<div class="hero">
+  <div>
+    <h1>Taiba Fatima</h1>
+    <p class="pos">I build the technology, and the business around it.</p>
+    <p>AI engineer and entrepreneur from Layyah, Pakistan. I solve real-world problems with AI, system thinking, system modeling, and system design.</p>
+    <div class="cta-row"><a class="btn" href="#contact">Start a project</a><a class="btn alt" href="#projects">See my work</a></div>
+  </div>
+  <canvas id="net" role="img" aria-label="Animated network of connected nodes, representing a system"></canvas>
+</div>
+
+<!-- ===== About ===== -->
+<section id="about" aria-labelledby="about-h">
+  <h2 id="about-h">About</h2>
+  <div class="about">
+    <div class="photo" role="img" aria-label="Photo placeholder for Taiba Fatima">TF</div>
+    <div>
+      <p class="lede" style="margin-bottom:0">I’m Taiba Fatima, a technology engineer and entrepreneur from Layyah, Pakistan, who uses artificial intelligence to solve real-world problems. I don’t start with the tools. I start with the problem and the system around it: the people, the processes, and the data. I model how it works, design a better system, and build AI solutions that fit it, work reliably, and make a clear difference. [EDIT: add your education, experience, or a project you’re proud of.]</p>
+      <dl class="facts">
+        <div><dt>Experience</dt><dd>[EDIT] years</dd></div>
+        <div><dt>Projects delivered</dt><dd>[EDIT]</dd></div>
+        <div><dt>Focus</dt><dd>AI, system modeling and design</dd></div>
+        <div><dt>Location</dt><dd>Layyah, Pakistan</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Expertise ===== -->
+<section id="expertise" aria-labelledby="exp-h">
+  <h2 id="exp-h">Expertise</h2>
+  <div role="tablist" aria-label="Expertise areas">
+    <button role="tab" id="t0" aria-selected="true" aria-controls="p0">AI engineering</button>
+    <button role="tab" id="t1" aria-selected="false" aria-controls="p1" tabindex="-1">Entrepreneurship</button>
+  </div>
+  <div class="tabpanel" id="p0" role="tabpanel" aria-labelledby="t0"><ul>
+    <li><strong>LLM applications</strong><span>Assistants and tools built on large language models.</span></li>
+    <li><strong>Agentic systems</strong><span>AI that plans, uses tools, and completes tasks.</span></li>
+    <li><strong>RAG</strong><span>Answers grounded in your own documents and data.</span></li>
+    <li><strong>Fine-tuning and evaluation</strong><span>Models tuned and tested for your use case.</span></li>
+    <li><strong>MLOps and data pipelines</strong><span>Reliable deployment, monitoring, and clean data.</span></li><li><strong>System modeling</strong><span>Mapping how a system works, so problems and bottlenecks become clear.</span></li><li><strong>System design</strong><span>Designing the structure around the AI so it works reliably in the real world.</span></li>
+  </ul></div>
+  <div class="tabpanel hidden" id="p1" role="tabpanel" aria-labelledby="t1"><ul><li><strong>Product strategy</strong><span>Turning a real problem into a product people need.</span></li><li><strong>Go-to-market</strong><span>Finding the first customers and a clear way to reach them.</span></li><li><strong>Fundraising</strong><span>Telling the story and the numbers to investors.</span></li><li><strong>Team building</strong><span>Hiring and guiding people to ship together.</span></li><li><strong>AI transformation consulting</strong><span>Helping businesses decide where AI really helps.</span></li></ul></div>
+</section>
+
+<!-- ===== Ventures ===== -->
+<section id="ventures" aria-labelledby="v-h"><h2 id="v-h">Ventures</h2><p class="lede">[EDIT] Add your companies or products here.</p><div class="grid" id="vgrid"></div></section>
+
+<!-- ===== Projects ===== -->
+<section id="projects" aria-labelledby="proj-h">
+  <h2 id="proj-h">Featured projects</h2>
+  <p class="lede">These are example entries. [EDIT] Replace them with your real projects in the data array at the top of the script.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<!-- ===== Tech stack ===== -->
+<section id="stack" aria-labelledby="stack-h">
+  <h2 id="stack-h">Tech stack</h2>
+  <div class="stack" id="stackbox"></div>
+</section>
+
+<!-- ===== Experience ===== -->
+<section id="experience" aria-labelledby="x-h"><h2 id="x-h">Experience</h2><ol class="tl" id="tl"></ol></section>
+
+<!-- ===== Speaking and writing ===== -->
+<section id="writing" aria-labelledby="w-h"><h2 id="w-h">Speaking and writing</h2><div class="grid" id="wgrid"></div></section>
+
+<!-- ===== Testimonials ===== -->
+<section id="quotes" aria-labelledby="q-h"><h2 id="q-h">Testimonials</h2><p class="lede">[EDIT] These are placeholders. Replace them with real quotes.</p><div class="grid" id="qgrid"></div></section>
+
+<!-- ===== Services ===== -->
+<section id="services" aria-labelledby="serv-h">
+  <h2 id="serv-h">Work with me</h2>
+  <div class="services">
+    <div class="card"><h3>AI product build</h3><ul><li>Problem and system analysis</li><li>Working AI prototype</li><li>Deployment and handover</li></ul><a class="btn alt" href="#contact">Discuss a build</a></div>
+    <div class="card"><h3>AI strategy advisory</h3><ul><li>Find where AI saves time or money</li><li>Roadmap and priorities</li><li>Team guidance</li></ul><a class="btn alt" href="#contact">Book a conversation</a></div>
+    <div class="card"><h3>Technical due diligence</h3><ul><li>Review of an existing AI system</li><li>Risks and bottlenecks</li><li>Clear list of fixes</li></ul><a class="btn alt" href="#contact">Request a review</a></div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact" aria-labelledby="con-h">
+  <h2 id="con-h">Tell me about your project</h2>
+  <div class="contact">
+    <form id="form" novalidate>
+      <label>Name<input id="n" autocomplete="name" required><span class="err" id="en"></span></label>
+      <label>Email<input id="e" type="email" autocomplete="email" required><span class="err" id="ee"></span></label>
+      <label>Organisation (optional)<input id="o" autocomplete="organization"></label>
+      <label>Inquiry type<select id="k"><option>New project</option><option>Consulting</option><option>Technical review</option><option>Something else</option></select></label>
+      <label>Message<textarea id="m" rows="5" required></textarea><span class="err" id="em"></span></label>
+      <button class="btn" type="submit">Send message</button>
+      <p class="err" id="fs" role="status"></p>
+    </form>
+    <div>
+      <p class="lede">Prefer to reach out directly?</p>
+      <ul>
+        <li><a href="mailto:you@example.com">you@example.com</a> [EDIT]</li>
+        <li><a href="#">LinkedIn</a> [EDIT]</li>
+        <li><a href="#">GitHub</a> [EDIT]</li>
+        <li><a href="#">X</a> [EDIT]</li><li><a href="#">Book a call</a> [EDIT]</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer><div class="wrap"><span>© 2026 Taiba Fatima, Layyah, Pakistan</span><span><a href="#">LinkedIn</a> &nbsp; <a href="#">GitHub</a> &nbsp; <a href="#">X</a></span><a href="#top">Back to top</a></div></footer>
+
+<script>
+/* ===== Editable content ===== */
+const PROJECTS=[
+ {t:"[EDIT] Document assistant",c:"RAG",problem:"Staff lose hours searching internal documents.",approach:"Retrieval-augmented assistant that answers with sources.",stack:["Python","LLMs","Vector DB"],outcome:"[EDIT] add a real result",links:["GitHub","Demo"]},
+ {t:"[EDIT] Task automation agent",c:"Agents",problem:"Repetitive multi-step work slows the team down.",approach:"An agent that plans steps and uses business tools.",stack:["Python","Tool use","APIs"],outcome:"[EDIT] add a real result",links:["GitHub","Case study"]},
+ {t:"[EDIT] Demand forecasting",c:"ML",problem:"Planning relies on guesswork.",approach:"Forecasting model with monitoring for drift.",stack:["PyTorch","SQL","Docker"],outcome:"[EDIT] add a real result",links:["GitHub"]},
+ {t:"[EDIT] Customer support product",c:"Products",problem:"Customers wait too long for answers.",approach:"AI assistant with a human handoff.",stack:["LLMs","React","Cloud"],outcome:"[EDIT] add a real result",links:["Demo","Case study"]}
+];
+const STACK={"Languages":["Python","C++","SQL","JavaScript"],"LLM and AI":["PyTorch","Transformers","LangChain","RAG","Agents"],"Cloud and MLOps":["Docker","Kubernetes","AWS","GCP","CI/CD"],"Data":["PostgreSQL","Pandas","Vector databases","ETL"],"Systems":["System thinking","System modeling","System design"]};
+
+const VENTURES=[{n:"[EDIT] Your venture",d:"One line about what it does.",role:"Founder",status:"Building",m:"[EDIT] add a real metric",l:"#"}];
+const TIMELINE=[{y:"[EDIT] Year",t:"[EDIT] Role or milestone",d:"What you did and what changed."},{y:"[EDIT] Year",t:"[EDIT] Role or milestone",d:"What you did and what changed."}];
+const WRITING=[{d:"[EDIT] Date",t:"[EDIT] Talk, article or podcast title",k:"Article",l:"#"}];
+const QUOTES=[{q:"[EDIT] Placeholder quote from a client.",a:"Client name, company"},{q:"[EDIT] Placeholder quote from a collaborator.",a:"Name, role"}];
+
+/* ===== Render projects, filters, stack ===== */
+const $=s=>document.querySelector(s);
+document.documentElement.classList.add("js");
+const cats=["All",...new Set(PROJECTS.map(p=>p.c))];
+$("#filters").innerHTML=cats.map((c,i)=>`<button class="tabbtn" data-c="${c}" aria-pressed="${i==0}">${c}</button>`).join("");
+document.querySelectorAll(".tabbtn").forEach(b=>{b.style.cssText="background:none;border:1px solid var(--line);color:var(--ink);padding:8px 16px;border-radius:99px;cursor:pointer;font:500 .95rem 'IBM Plex Sans',sans-serif"});
+function draw(c){
+  const on=b=>{const a=b.dataset.c===c;b.setAttribute("aria-pressed",a);b.style.background=a?"var(--ink)":"none";b.style.color=a?"var(--bg)":"var(--ink)"};
+  document.querySelectorAll(".tabbtn").forEach(on);
+  $("#grid").innerHTML=PROJECTS.filter(p=>c==="All"||p.c===c).map(p=>`<article class="card reveal"><h3>${p.t}</h3><p><b>Problem:</b> ${p.problem}</p><p><b>Approach:</b> ${p.approach}</p><div class="out"><p><b>Outcome:</b> ${p.outcome}</p></div><div>${p.stack.map(s=>`<span class="chip">${s}</span>`).join("")}</div><p>${p.links.map(l=>`<a href="#">${l}</a>`).join(" &nbsp; ")}</p></article>`).join("");
+  watch();
+}
+$("#filters").onclick=e=>{if(e.target.dataset.c)draw(e.target.dataset.c)};
+$("#stackbox").innerHTML=Object.entries(STACK).map(([g,a])=>`<div><h3>${g}</h3>${a.map(s=>`<span class="chip">${s}</span>`).join("")}</div>`).join("");
+
+$("#vgrid").innerHTML=VENTURES.map(v=>`<article class="card reveal"><h3>${v.n}</h3><span class="status">${v.status}</span><p>${v.d}</p><p><b>Role:</b> ${v.role}</p><p><b>Metric:</b> ${v.m}</p><p><a href="${v.l}">Visit</a></p></article>`).join("");
+$("#tl").innerHTML=TIMELINE.map(x=>`<li><small>${x.y}</small><b>${x.t}</b><p style="margin:2px 0 0;color:var(--muted)">${x.d}</p></li>`).join("");
+$("#wgrid").innerHTML=WRITING.map(w=>`<article class="card reveal"><small>${w.d}, ${w.k}</small><h3>${w.t}</h3><p><a href="${w.l}">Read or watch</a></p></article>`).join("");
+$("#qgrid").innerHTML=QUOTES.map(q=>`<article class="card reveal"><blockquote>“${q.q}”</blockquote><p>${q.a}</p></article>`).join("");
+
+/* ===== Scroll reveal ===== */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});
+function watch(){document.querySelectorAll(".reveal:not(.in)").forEach(el=>io.observe(el))}
+draw("All");
+
+/* ===== Tabs ===== */
+const tabs=[...document.querySelectorAll("[role=tab]")].filter(t=>t.id[0]==="t");
+tabs.forEach((t,i)=>t.onclick=()=>{tabs.forEach((x,j)=>{x.setAttribute("aria-selected",i===j);x.tabIndex=i===j?0:-1;$("#p"+j).classList.toggle("hidden",i!==j)})});
+tabs.forEach(t=>t.onkeydown=e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const n=tabs[(tabs.indexOf(t)+1)%tabs.length];n.focus();n.click()}});
+
+/* ===== Theme toggle + mobile menu ===== */
+const root=document.documentElement;
+try{const s=localStorage.getItem("theme");if(s)root.dataset.theme=s}catch(e){}
+$("#theme").onclick=()=>{
+  const cur=root.dataset.theme||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
+  const nx=cur==="dark"?"light":"dark";root.dataset.theme=nx;
+  try{localStorage.setItem("theme",nx)}catch(e){}
+};
+$("#menu").onclick=()=>{const o=$("#links").classList.toggle("open");$("#menu").setAttribute("aria-expanded",o)};
+$("#links").onclick=e=>{if(e.target.tagName==="A"){$("#links").classList.remove("open");$("#menu").setAttribute("aria-expanded","false")}};
+
+/* ===== Hero signature: animated system graph ===== */
+(function(){
+  const cv=$("#net"),cx=cv.getContext("2d"),still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  let W,H,N=[];
+  function size(){const d=devicePixelRatio||1;W=cv.clientWidth;H=cv.clientHeight;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0);
+    N=Array.from({length:Math.max(12,Math.round(W/28))},(_,i)=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,hub:i%6===0}))}
+  function frame(t){
+    const cs=getComputedStyle(root),ac=cs.getPropertyValue("--accent").trim(),sg=cs.getPropertyValue("--signal").trim(),ln=cs.getPropertyValue("--line").trim();
+    cx.clearRect(0,0,W,H);
+    N.forEach(n=>{if(!still){n.x+=n.vx;n.y+=n.vy;if(n.x<0||n.x>W)n.vx*=-1;if(n.y<0||n.y>H)n.vy*=-1}});
+    for(let i=0;i<N.length;i++)for(let j=i+1;j<N.length;j++){
+      const a=N[i],b=N[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+      if(d<120){cx.strokeStyle=ln;cx.globalAlpha=1-d/120;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
+    cx.globalAlpha=1;
+    N.forEach((n,i)=>{const p=n.hub&&!still?2*Math.sin(t/500+i):0;cx.fillStyle=n.hub?sg:ac;cx.beginPath();cx.arc(n.x,n.y,(n.hub?6:3)+p,0,7);cx.fill()});
+    if(!still)requestAnimationFrame(frame);
+  }
+  size();requestAnimationFrame(frame);
+  let rt;addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(()=>{size();if(still)frame(0)},150)});
+  if(still)root.addEventListener("click",()=>frame(0));
+})();
+
+/* ===== Contact form: validation + mailto fallback ===== */
+$("#form").onsubmit=e=>{
+  e.preventDefault();
+  const n=$("#n").value.trim(),m=$("#m").value.trim(),em=$("#e").value.trim();
+  $("#en").textContent=n?"":"Enter your name.";
+  $("#ee").textContent=/^\S+@\S+\.\S+$/.test(em)?"":"Enter a valid email address.";
+  $("#em").textContent=m.length>9?"":"Write at least 10 characters.";
+  if(!n||!/^\S+@\S+\.\S+$/.test(em)||m.length<10)return;
+  const body=`Name: ${n}\nEmail: ${em}\nOrganisation: ${$("#o").value}\nType: ${$("#k").value}\n\n${m}`;
+  location.href="mailto:you@example.com?subject="+encodeURIComponent("Website inquiry: "+$("#k").value)+"&body="+encodeURIComponent(body);
+  $("#fs").textContent="Your email app should open now. [EDIT] Replace you@example.com in the code.";
+};
+</script>
+</body>
+</html>
